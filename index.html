@@ -46,6 +46,7 @@
     </div>
   </section>
 
+
   <!-- ==================== SCROLLYTELLING SECTIONS ==================== -->
   <div class="container">
 
@@ -133,15 +134,12 @@
 
             <!-- Body silhouette -->
             <g filter="url(#holoBlur)" opacity="0.85">
-              <!-- Torso -->
               <path d="M160,200 Q155,260 150,320 Q148,360 170,380 L230,380 Q252,360 250,320 Q245,260 240,200 Q230,170 200,160 Q170,170 160,200Z" 
                     fill="url(#holoGrad)" stroke="#00E5D4" stroke-width="1"/>
-              <!-- Shoulders -->
               <path d="M155,210 Q120,220 110,250 Q108,270 120,280 L155,270" 
                     fill="none" stroke="#00E5D4" stroke-width="1.5" opacity="0.7"/>
               <path d="M245,210 Q280,220 290,250 Q292,270 280,280 L245,270" 
                     fill="none" stroke="#00E5D4" stroke-width="1.5" opacity="0.7"/>
-              <!-- Arms -->
               <line x1="115" y1="265" x2="100" y2="350" stroke="#00E5D4" stroke-width="1.2" opacity="0.5"/>
               <line x1="285" y1="265" x2="300" y2="350" stroke="#00E5D4" stroke-width="1.2" opacity="0.5"/>
             </g>
@@ -220,9 +218,16 @@
     <p class="mono">Projeto AURA · 2026 · Rien que l'essentiel. Tout l'impossible.</p>
   </footer>
 
+  <!-- ==================== FIRA SPEECH BUBBLE ==================== -->
+  <div class="fira-speech" id="firaSpeech">
+    <div class="fira-speech__bubble">
+      <div class="fira-speech__label">FIRA diz:</div>
+      <div class="fira-speech__text" id="firaSpeechText"></div>
+    </div>
+  </div>
+
   <!-- ==================== FIRA MINI ROBOT ==================== -->
   <div class="fira-bot fira-bot__idle" id="firaBot" aria-label="FIRA — Assistente virtual interativa">
-    <div class="fira-bot__tooltip">Olá, sou FIRA!</div>
     <svg viewBox="0 0 80 110" xmlns="http://www.w3.org/2000/svg" overflow="visible">
       <defs>
         <linearGradient id="botBodyGrad" x1="0" y1="0" x2="0" y2="1">
@@ -257,14 +262,12 @@
         <rect x="20" y="18" width="40" height="30" rx="10" ry="10" 
               fill="url(#botFaceGrad)" stroke="rgba(0,229,212,0.2)" stroke-width="0.5"/>
 
-        <!-- Left eye socket -->
+        <!-- Eye sockets -->
         <ellipse cx="31" cy="33" rx="8" ry="7" fill="rgba(0,229,212,0.08)" stroke="rgba(0,229,212,0.15)" stroke-width="0.5"/>
-        <!-- Right eye socket -->
         <ellipse cx="49" cy="33" rx="8" ry="7" fill="rgba(0,229,212,0.08)" stroke="rgba(0,229,212,0.15)" stroke-width="0.5"/>
 
-        <!-- Left eye glow -->
+        <!-- Eye glow -->
         <circle cx="31" cy="33" r="5" fill="url(#eyeGlow)" opacity="0.3" filter="url(#botGlow)"/>
-        <!-- Right eye glow -->
         <circle cx="49" cy="33" r="5" fill="url(#eyeGlow)" opacity="0.3" filter="url(#botGlow)"/>
 
         <!-- Left pupil (moves) -->
@@ -283,7 +286,7 @@
         <rect class="fira-bot__eyelid" x="23" y="26" width="16" height="14" rx="7" fill="#0f1c1e"/>
         <rect class="fira-bot__eyelid" x="41" y="26" width="16" height="14" rx="7" fill="#0f1c1e"/>
 
-        <!-- Mouth (small line) -->
+        <!-- Mouth -->
         <path d="M34,43 Q40,46 46,43" fill="none" stroke="#00E5D4" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
 
         <!-- Neck -->
@@ -310,7 +313,7 @@
         <rect x="22" y="92" width="14" height="6" rx="3" fill="#0a1214" stroke="#00E5D4" stroke-width="0.5" opacity="0.6"/>
         <rect x="44" y="92" width="14" height="6" rx="3" fill="#0a1214" stroke="#00E5D4" stroke-width="0.5" opacity="0.6"/>
 
-        <!-- Base shadow/glow -->
+        <!-- Base glow -->
         <ellipse cx="40" cy="102" rx="24" ry="4" fill="#00E5D4" opacity="0.1">
           <animate attributeName="opacity" values="0.06;0.15;0.06" dur="3s" repeatCount="indefinite"/>
         </ellipse>
